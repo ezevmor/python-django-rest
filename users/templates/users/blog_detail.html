@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body %}
+
+    <h1>{{blog.profile.blog_name}}</h1>
+    <p>Author: {{blog.username}}</p>
+
+    <br>
+    {% if user_posts|length > 0 %}
+        {% include "posts/includes/post_preview_list.html" with post_list=user_posts %}
+    {% else %}
+        <p>Este blog no contiene ningun post</p>
+    {% endif %}
+{% endblock %}

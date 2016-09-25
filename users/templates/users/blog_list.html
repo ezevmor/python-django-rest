@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block body %}
+    {% for blog in blogs_list %}
+        <a href="{% url 'users_blog_detail' blog.user_id %}">
+            <h2>{{blog.blog_name}}</h2>
+        </a>
+        <p>autor: {{blog.user}}</p>
+        <br>
+    {% endfor %}
+{% endblock %}

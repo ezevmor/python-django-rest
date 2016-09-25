@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block body %}
+    <h1>Bienvenido a Techblogs</h1>
+
+    {% if post_list|length > 0 %}
+        {% include "posts/includes/post_preview_list.html" %}
+    {% else %}
+        <p>Registrate y se el primero en crear un post!</p>
+    {% endif %}
+
+{% endblock %}

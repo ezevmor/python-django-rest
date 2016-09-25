@@ -1,0 +1,9 @@
+{% for post in post_list %}
+    {% include "posts/includes/post_preview.html" %}
+    <br>
+    <a href="{% url 'posts_post_detail' post.owner_id post.id %}">seguir leyendo</a>
+    <br>
+    <br>
+    <br>
+    <br>
+{% endfor %}
